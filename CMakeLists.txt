@@ -12,7 +12,7 @@ link_directories(D:/SFML-2.6.1/lib)
 
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
-add_executable(Auto_Ping-Pong src/main.cpp)
+add_executable(Auto_Ping-Pong src/main.cpp src/ball.cpp src/GameEngine.cpp src/GameLoop.cpp)
 
 target_include_directories(Auto_Ping-Pong PRIVATE include)
 
