@@ -77,5 +77,5 @@ sf::FloatRect Ball::getNextPosition() const
 // Set X-velocity by inertiaMultiplayer
 void Ball::setVelocityX()
 {
-    velocity.x /= Constants::Physics::inertiaMultiplayer;
+    velocity.x *= Constants::Physics::inertiaMultiplayer;
 }

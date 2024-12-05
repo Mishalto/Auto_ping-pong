@@ -65,7 +65,7 @@ void GameEngine::objectsCollision()
     if(playerBounds.intersects(ballNextPos))
     {
         ball.reverseVelocityY();
-        if(player.getCurrentSpeed() == 0)
+        if(player.getCurrentSpeed() > 0)
         {
             ball.setVelocityX();
         }
