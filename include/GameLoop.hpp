@@ -11,5 +11,6 @@ private:
 public:
     Game();
 
+    // Game methods
     void start();
 };

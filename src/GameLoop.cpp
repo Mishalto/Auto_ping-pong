@@ -5,6 +5,7 @@ Game::Game()
 {
 }
 
+// Main game loop
 void Game::start()
 {
     while (game.getWindow().isOpen())
@@ -15,6 +16,7 @@ void Game::start()
             if (event.type == sf::Event::Closed)
                 game.getWindow().close();
         }
+        game.update();
 
         game.draw();
     }
