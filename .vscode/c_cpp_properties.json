@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/SFML-2.6.1/include",
+                "D:/SFML-2.6.1/include/SFML"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/Program Files/LLVM/bin/clang++.exe",  // Путь к clang++
+            "cStandard": "c17",
+            "cppStandard": "c++20",  // Ты используешь C++20
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
