@@ -24,6 +24,7 @@ public:
     // Getters
     sf::FloatRect getGlobalBounds() const;
     float getCurrentSpeed() const;
+    sf::Vector2f getSize() const;
 
     // Update status
     void update();

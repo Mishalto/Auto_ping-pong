@@ -26,28 +26,54 @@ void Player::update()
     checkInput();
 }
 
-// Check keyboard input and move
+// Check keyboard input and move player 1 and player 2
 void Player::checkInput()
 {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    if (player.getPosition().y > Constants::Resolution::height / 2)
     {
-        if(player.getPosition().x < Constants::Resolution::width - xSize)
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
         {
-            player.move(globalSpeed, 0.f);
-            currentSpeed = globalSpeed;
+            if (player.getPosition().x < Constants::Resolution::width - xSize)
+            {
+                player.move(globalSpeed, 0.f);
+                currentSpeed = globalSpeed;
+            }
         }
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-    {
-        if(player.getPosition().x > 0)
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         {
-            player.move(-globalSpeed, 0.f);
-            currentSpeed = -globalSpeed;
+            if (player.getPosition().x > 0)
+            {
+                player.move(-globalSpeed, 0.f);
+                currentSpeed = -globalSpeed;
+            }
+        }
+        else
+        {
+            currentSpeed = 0.f;
         }
     }
     else
     {
-        currentSpeed = 0.f;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        {
+            if (player.getPosition().x < Constants::Resolution::width - xSize)
+            {
+                player.move(globalSpeed, 0.f);
+                currentSpeed = globalSpeed;
+            }
+        }
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        {
+            if (player.getPosition().x > 0)
+            {
+                player.move(-globalSpeed, 0.f);
+                currentSpeed = -globalSpeed;
+            }
+        }
+        else
+        {
+            currentSpeed = 0.f;
+        }
     }
 }
 
@@ -61,4 +87,10 @@ sf::FloatRect Player::getGlobalBounds() const
 float Player::getCurrentSpeed() const
 {
     return currentSpeed;
+}
+
+// Get size
+sf::Vector2f Player::getSize() const
+{
+    return {xSize, ySize};
 }

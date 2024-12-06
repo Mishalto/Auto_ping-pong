@@ -4,12 +4,13 @@
 Ball::Ball()
 {
     // Set the starting position of the ball and its radius
-    radius = 15;
+    radius = 10;
     ball.setPosition(sf::Vector2f(400, 300));
     ball.setRadius(radius);
+    ball.setFillColor(sf::Color::Red);
 
     // Setting the base ball values
-    speed = 3.f; // Base value = 3
+    speed = 4.f; // Base value = 4
     velocity.x = speed;
     velocity.y = speed;
 }
@@ -75,7 +76,17 @@ sf::FloatRect Ball::getNextPosition() const
 }
 
 // Set X-velocity by inertiaMultiplayer
-void Ball::setVelocityX()
+void Ball::setVelocityX(bool playerIsMoving)
 {
-    velocity.x *= Constants::Physics::inertiaMultiplayer;
+    // Player moving
+    if(playerIsMoving)
+    {
+        velocity.x *= Constants::Physics::inertiaMultiplayer;
+    }
+    // Player is standing
+    else
+    {
+        velocity.x /= Constants::Physics::inertiaMultiplayer;
+    }
 }
+

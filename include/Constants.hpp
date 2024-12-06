@@ -4,8 +4,8 @@ namespace Constants
 {
     namespace Resolution
     {
-        const int width = 800;
-        const int height = 600;
+        const int width = 1920;
+        const int height = 1080;
     }
     namespace Physics
     {

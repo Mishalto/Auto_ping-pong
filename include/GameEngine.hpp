@@ -15,6 +15,10 @@ private:
     // Objects
     Ball ball;
     Player player;
+    Player player2;
+
+    // Timer
+    sf::Clock timer;
 public:
     // Declarated constuctor
     GameEngine();
@@ -26,7 +30,8 @@ public:
     // Collision methods
     void offScreenCollision();
     void objectsCollision();
-    
+    void objectsCollisionP2();
     // Physics methods
     void update();
+
 };

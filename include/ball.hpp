@@ -7,12 +7,12 @@
 class Ball
 {
 private:
-sf::CircleShape ball;
+    sf::CircleShape ball;
 
-float radius;
+    float radius;
 
-sf::Vector2f velocity;
-[[maybe_unused]]float speed;
+    sf::Vector2f velocity;
+    float speed;
 
 public:
     // Declarated constructor
@@ -27,7 +27,7 @@ public:
     // Setters
     void reverseVelocityX();
     void reverseVelocityY();
-    void setVelocityX();
+    void setVelocityX(bool playerIsMoving);
 
     // Getters
     float getSpeed() const;
