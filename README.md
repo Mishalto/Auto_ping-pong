@@ -1,6 +1,6 @@
 # Auto Ping Pong
 A two-player ping pong game.  
-Controls: **W, A, S, D** for Player 1 (move up, down, left, right), **Arrow keys** for Player 2 (move left and right).
+Controls: **W, D** for Player 1 (eft, right), **Arrow keys** for Player 2 (move left and right).
 
 ## Design
 All the core logic is handled by the **GameEngine**.  
