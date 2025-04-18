@@ -4,7 +4,7 @@ Controls: **W, A, S, D** for Player 1 (move up, down, left, right), **Arrow keys
 
 ## Design
 All the core logic is handled by the **GameEngine**.  
-One of the unique features of the game is inertia — the acceleration depends on the player's movement.
+One of the unique features of the game is inertia - the acceleration depends on the player's movement.
 
 ## Build
 1. Clone the repository.  
