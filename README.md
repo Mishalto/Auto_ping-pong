@@ -8,5 +8,5 @@ One of the unique features of the game is inertia - the acceleration depends on 
 
 ## Build
 1. Clone the repository.  
-2. Install Visual Studio Code (VS Code), a stable version of CMake, and Git.  
+2. Windows 10/11, Visual Studio Code (VS Code), a stable version of CMake, and Git.  
 3. CMake will automatically pull SFML, and after that, the project will be ready to use.
